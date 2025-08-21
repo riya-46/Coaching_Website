@@ -425,6 +425,44 @@ h2 {
   box-shadow: 0 18px 40px rgb(220, 23, 23);
 }
 
+/* Responsive Fix for Contact Section */
+#contact .contact-info ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+#contact .contact-info li {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  margin: 8px 0;
+  font-size: 1.2rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+  #contact {
+    padding: 50px 15px;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  #contact .contact-info, 
+  #contact .form-link,
+  .social-links {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  #contact .contact-info li {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}
+
+
 .social-links {
   max-width: 900px;
   background: linear-gradient(135deg, #ffffff,#07f02a );
@@ -499,4 +537,5 @@ footer a {
     font-size: 1.1rem;
   }
 }
+
 
