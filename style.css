@@ -1,0 +1,501 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #fae844;
+  scroll-behavior: smooth;
+}
+
+/* Fix sticky header ka overlap */
+section {
+  scroll-margin-top: 120px;
+}
+
+/* ========== HEADER ========== */
+header {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 20px 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .logo h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+}
+header .logo p {
+  font-size: 25px;
+  color: #f1c40f;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.25s;
+}
+header nav ul li a:hover {
+  color: #f39c12;
+}
+
+/* ========== SHARED SECTION BASICS ========== */
+section {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  color: #2c3e50;
+}
+
+/* ========== HERO ========== */
+.hero {
+  background: #7a7a7a;
+  color: #fff;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+}
+.hero-logo {
+  max-width: 220px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.hero-heading {
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: #ff6600;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 0 #333, 4px 4px 5px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, text-shadow 0.3s ease, color 0.3s ease;
+}
+.hero-heading:hover {
+  transform: scale(1.05) translateY(-3px);
+  text-shadow: 3px 3px 0 #222, 6px 6px 12px rgba(0,0,0,0.6);
+  color: #ff771a;
+}
+.hero p {
+  font-size: 1.1rem;
+  color: #ececec;
+  margin-bottom: 22px;
+}
+.hero a {
+  background: #f39c12;
+  padding: 12px 26px;
+  border-radius: 28px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.25s;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+.hero a:hover {
+  background: #e67e22;
+  transform: translateY(-2px);
+}
+
+/* ========== ABOUT ========== */
+.about {
+  background: #f1f5f9;
+  padding: 80px 20px;
+}
+.about .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d7997;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+.about .section-title::after {
+  display: none; /* underline hat gaya */
+}
+.about-box {
+  max-width: 1050px;
+  margin: auto;
+  background: linear-gradient(135deg, #efebee,#c868ad );
+  padding: 60px 70px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(189, 15, 15, 0.581);
+  font-size: 1.4rem;
+  line-height: 1.9;
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(218, 12, 12, 0.866);
+}
+.about-box strong {
+  color: #3135ab;
+}
+.about-box em {
+  color: #16a085;
+  font-style: italic;
+}
+
+/* ===== Courses Section ===== */
+.courses {
+  background: #9cee8a;
+  padding: 80px 20px;
+}
+.courses .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d7997;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+.course-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.course {
+  flex: 1 1 250px;
+  background: linear-gradient(135deg, #f6f6f6, #ff7c0a);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.fee-img {
+  width: 60%;
+  border-radius: 12px;
+  margin-top: 10px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.fee-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+}
+
+.course:hover {
+  transform: translateY(-12px) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 20px 40px rgba(224, 23, 23, 0.899);
+}
+.course h3 {
+  font-size: 1.8rem;
+  color: #072138;
+  margin-bottom: 20px;
+  font-family: "Georgia", serif;
+  position: relative;
+}
+.course h3::after {
+  content: "";
+  width: 60px;
+  height: 4px;
+  background: #1d7997;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+.course ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+.course ul li {
+  font-size: 1.4rem;
+  color: #d30f0f;
+  background: rgba(255,255,255,0.7);
+  font-family: "Georgia", serif;
+  margin: 10px 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(195, 11, 11, 0.834);
+}
+.course ul li:hover {
+  transform: translateX(6px) scale(1.05);
+  background: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* ===== Gallery Section ===== */
+/* ----------------- GALLERY SECTION ----------------- */
+.gallery-section {
+  padding: 60px 20px;
+  background: #b7b5b5;
+  text-align: center;
+}
+
+.gallery-section .section-title {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #1d7997;
+  position: relative;
+  font-weight: bold;
+  font-family: "Georgia", serif;
+}
+
+/* Each Block (Founder, Faculties, Students) */
+.gallery-block {
+  margin-bottom: 50px;
+  opacity: 0; /* for animation */
+  animation: fadeInUp 1s ease forwards;
+}
+
+.gallery-block h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #f10a85;
+  font-weight: 600;
+  font-family: "Georgia", serif;
+}
+
+/* ---------- Founder & Faculties ---------- */
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item img {
+  width: 220px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+
+}
+
+/* Founder photo larger */
+.founder-item img {
+  width: 330px;
+  height: 390px;
+}
+
+/* Hover 3D Effect */
+.gallery-item:hover {
+  transform: translateY(-10px) scale(1.05) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0px 12px 25px rgba(220, 11, 11, 0.958);
+}
+
+.caption {
+  margin-top: 12px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #080808;
+  font-family: "Georgia", serif;
+}
+
+/* ---------- Students Slider ---------- */
+.student-slider {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.student-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.student-slides .slide {
+  min-width: 250px;
+  margin: 0 10px;
+}
+
+.student-slides img {
+  width: 100%;
+  height: 250px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.student-slides img:hover {
+  transform: scale(1.05);
+}
+
+/* Prev & Next Buttons */
+.student-slider .prev,
+.student-slider .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #007bff;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.student-slider .prev:hover,
+.student-slider .next:hover {
+  background: #0056b3;
+}
+
+.student-slider .prev { left: 10px; }
+.student-slider .next { right: 10px; }
+
+/* ---------- Animations (like About Us) ---------- */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.gallery-block:nth-child(1) { animation-delay: 0.3s; }
+.gallery-block:nth-child(2) { animation-delay: 0.6s; }
+.gallery-block:nth-child(3) { animation-delay: 0.9s; }
+
+/* ========== CONTACT ========== */
+/* Contact Section Animation */
+
+#contact {
+  background: #f1f5f9;  /* About Us जैसा background */
+  padding: 80px 20px;
+}
+
+#contact h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1d7997;
+  margin-bottom: 40px;
+  font-family: "Georgia", serif;
+}
+
+#contact .contact-info, 
+#contact .form-link {
+  max-width: 900px;
+  margin: auto;
+  background: linear-gradient(135deg, #ffffff,#07f02a );
+  padding: 40px 50px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgb(228, 31, 31);
+  font-size: 2rem;
+  line-height: 1;
+  color: #333;
+  font-family: "Georgia", serif;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect like about-box */
+#contact .contact-info:hover, 
+#contact .form-link:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgb(220, 23, 23);
+}
+
+.social-links {
+  max-width: 900px;
+  background: linear-gradient(135deg, #ffffff,#07f02a );
+  margin: 20px auto;
+  padding: 25px;
+  line-height: 1;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(228,31,31);
+  text-align: center;
+}
+
+.social-links h3 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.social-links a i {
+  margin-right: 8px;   /* icon aur text ke beech gap */
+  font-size: 1.3rem;
+  vertical-align: middle;
+}
+
+/* Button Colors */
+.social-links .yt { background: #ff0000; }
+.social-links .insta { background: #e1306c; }
+.social-links .fb { background: #3b65d1; }
+
+/* Hover effect */
+.social-links a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+
+/* ========== FOOTER ========== */
+footer {
+  background: #2c3e50;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+}
+footer a {
+  color: #f39c12;
+  text-decoration: none;
+}
+
+/* ========== RESPONSIVE TWEAKS ========== */
+@media (max-width: 480px) {
+  header .logo h1 {
+    font-size: 30px;
+  }
+  .hero-logo {
+    max-width: 160px;
+  }
+  .hero-heading {
+    font-size: 1.8rem;
+  }
+  .about-box {
+    padding: 30px 20px;
+    font-size: 1.1rem;
+  }
+}
